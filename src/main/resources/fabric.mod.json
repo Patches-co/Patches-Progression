@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "patches-progression",
+	"version": "${version}",
+	"name": "Patche's Progression",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Patches!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/patches-progression/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.patches.progression.PatchesProgression"
+		],
+		"fabric-datagen": [
+			"net.patches.progression.PatchesProgressionDataGenerator"
+		],
+        "client": [
+            "net.patches.progression.PatchesProgressionClient"
+        ]
+	},
+	"mixins": [
+		"patches-progression.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
