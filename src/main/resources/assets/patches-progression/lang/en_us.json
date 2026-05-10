@@ -2,5 +2,9 @@
   "item.patches-progression.chainmail_sheet": "Chainmail Sheet",
 
   "block.patches-progression.nether_rose_ore": "Nether Rose Ore",
-  "block.patches-progression.blackstone_rose_ore": "Blackstone Rose Ore"
+  "block.patches-progression.blackstone_rose_ore": "Blackstone Rose Ore",
+  "block.patches-progression.rose_block": "Rose Block",
+  "block.patches-progression.raw_rose_block": "Raw Rose Block",
+  "block.patches-progression.polished_rose": "Polished Rose",
+  "block.patches-progression.polished_cut_rose": "Polished Cut Rose"
 }

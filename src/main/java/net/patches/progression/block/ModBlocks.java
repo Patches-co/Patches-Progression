@@ -19,7 +19,23 @@ public class ModBlocks {
 
     public static final Block BLACKSTONE_ROSE_ORE = registerBlock("blackstone_rose_ore",
             new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
+
+    public static final Block RAW_ROSE_BLOCK = registerBlock("raw_rose_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
+
+    public static final Block ROSE_BLOCK = registerBlock("rose_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
+    public static final Block POLISHED_ROSE = registerBlock("polished_rose",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
+    public static final Block POLISHED_CUT_ROSE = registerBlock("polished_cut_rose",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -37,6 +53,10 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
                 fabricItemGroupEntries.add(ModBlocks.NETHER_ROSE_ORE);
                 fabricItemGroupEntries.add(ModBlocks.BLACKSTONE_ROSE_ORE);
+                fabricItemGroupEntries.add(ModBlocks.ROSE_BLOCK);
+                fabricItemGroupEntries.add(ModBlocks.RAW_ROSE_BLOCK);
+                fabricItemGroupEntries.add(ModBlocks.POLISHED_ROSE);
+                fabricItemGroupEntries.add(ModBlocks.POLISHED_CUT_ROSE);
         });
     }
 }
