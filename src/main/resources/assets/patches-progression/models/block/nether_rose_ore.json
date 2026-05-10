@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "patches-progression:block/nether_rose_ore"
+  }
+}
