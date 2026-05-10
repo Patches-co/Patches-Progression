@@ -53,10 +53,13 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
                 fabricItemGroupEntries.add(ModBlocks.NETHER_ROSE_ORE);
                 fabricItemGroupEntries.add(ModBlocks.BLACKSTONE_ROSE_ORE);
-                fabricItemGroupEntries.add(ModBlocks.ROSE_BLOCK);
-                fabricItemGroupEntries.add(ModBlocks.RAW_ROSE_BLOCK);
-                fabricItemGroupEntries.add(ModBlocks.POLISHED_ROSE);
-                fabricItemGroupEntries.add(ModBlocks.POLISHED_CUT_ROSE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(ModBlocks.ROSE_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.RAW_ROSE_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.POLISHED_ROSE);
+            fabricItemGroupEntries.add(ModBlocks.POLISHED_CUT_ROSE);
         });
     }
 }
