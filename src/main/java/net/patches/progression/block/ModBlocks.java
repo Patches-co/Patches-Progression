@@ -17,6 +17,10 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
 
+    public static final Block BLACKSTONE_ROSE_ORE = registerBlock("blackstone_rose_ore",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(PatchesProgression.MOD_ID, name), block);
@@ -30,8 +34,9 @@ public class ModBlocks {
     public static void registerModBlocks() {
         PatchesProgression.LOGGER.info("Registering Mod Blocks for " + PatchesProgression.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
                 fabricItemGroupEntries.add(ModBlocks.NETHER_ROSE_ORE);
+                fabricItemGroupEntries.add(ModBlocks.BLACKSTONE_ROSE_ORE);
         });
     }
 }
