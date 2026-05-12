@@ -3,13 +3,13 @@
   "category": "ingredients",
   "key": {
     "#": {
-      "item": "patches-progression:copper_upgrade_template"
+      "item": "patches-progression:rose_upgrade_template"
     },
     "M": {
-      "item": "minecraft:copper"
+      "item": "patches-progression:rose_ingot"
     },
     "S": {
-      "item": "minecraft:stone"
+      "item": "minecraft:blackstone"
     }
   },
   "pattern": [
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 2,
-    "id": "patches-progression:copper_upgrade_template"
+    "id": "patches-progression:rose_upgrade_template"
   }
 }
