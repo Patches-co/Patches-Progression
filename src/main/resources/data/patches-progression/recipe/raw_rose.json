@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "ingredients",
+  "ingredients": [
+    {
+      "item": "patches-progression:raw_rose_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "patches-progression:raw_rose"
+  }
+}

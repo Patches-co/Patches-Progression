@@ -1,10 +1,17 @@
 {
   "item.patches-progression.chainmail_sheet": "Chainmail Sheet",
+  "item.patches-progression.raw_rose": "Raw Rose",
+  "item.patches-progression.rose_ingot": "Rose Ingot",
+  "item.patches-progression.raw_rose_nugget": "Raw Rose Nugget",
+  "item.patches-progression.rose_nugget": "Rose Nugget",
 
   "block.patches-progression.nether_rose_ore": "Nether Rose Ore",
   "block.patches-progression.blackstone_rose_ore": "Blackstone Rose Ore",
   "block.patches-progression.rose_block": "Rose Block",
   "block.patches-progression.raw_rose_block": "Raw Rose Block",
   "block.patches-progression.polished_rose": "Polished Rose",
-  "block.patches-progression.polished_cut_rose": "Polished Cut Rose"
+  "block.patches-progression.polished_cut_rose": "Polished Cut Rose",
+
+  "itemgroup.patches-progression.patches_items": "Patches Items",
+  "itemgroup.patches-progression.patches_blocks": "Patches Blocks"
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "ingredients",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "rose_ingot",
+  "ingredient": {
+    "item": "patches-progression:raw_rose"
+  },
+  "result": {
+    "id": "patches-progression:rose_ingot"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "ingredients",
+  "ingredients": [
+    {
+      "item": "patches-progression:rose_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "patches-progression:rose_nugget"
+  }
+}

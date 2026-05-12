@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "ingredients",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "group": "rose_nugget",
+  "ingredient": {
+    "item": "patches-progression:raw_rose_nugget"
+  },
+  "result": {
+    "id": "patches-progression:rose_nugget"
+  }
+}

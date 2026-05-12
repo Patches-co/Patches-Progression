@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "building",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "group": "polished_rose",
+  "ingredient": {
+    "item": "patches-progression:rose_block"
+  },
+  "result": {
+    "id": "patches-progression:polished_rose"
+  }
+}
