@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "ingredients",
+  "key": {
+    "#": {
+      "item": "patches-progression:copper_upgrade_template"
+    },
+    "M": {
+      "item": "minecraft:copper"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "M#M",
+    "MSM",
+    "MMM"
+  ],
+  "result": {
+    "count": 2,
+    "id": "patches-progression:copper_upgrade_template"
+  }
+}

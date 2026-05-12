@@ -12,6 +12,41 @@
   "block.patches-progression.polished_rose": "Polished Rose",
   "block.patches-progression.polished_cut_rose": "Polished Cut Rose",
 
-  "itemgroup.patches-progression.patches_items": "Patches Items",
-  "itemgroup.patches-progression.patches_blocks": "Patches Blocks"
+  "itemgroup.patches-progression.patches_progression": "Patches Progression Items",
+
+  "tooltip.patches-progression.copper_upgrade.applies_to" : "Chainmail Armor",
+  "tooltip.patches-progression.iron_upgrade.applies_to" : "Chainmail Armor",
+  "tooltip.patches-progression.gold_upgrade.applies_to" : "Chainmail Armor",
+  "tooltip.patches-progression.rose_upgrade.applies_to" : "Gold Equipment",
+  "tooltip.patches-progression.diamond_upgrade.applies_to": "Iron Equipment" ,
+
+  "tooltip.patches-progression.copper_upgrade.ingredients" : "Copper Ingot",
+  "tooltip.patches-progression.iron_upgrade.ingredients" : "Iron Ingot",
+  "tooltip.patches-progression.gold_upgrade.ingredients" : "Gold Ingot",
+  "tooltip.patches-progression.rose_upgrade.ingredients" : "Rose Ingot",
+  "tooltip.patches-progression.diamond_upgrade.ingredients" : "Diamond Ingot",
+  
+  "item.patches-progression.copper_upgrade_smithing_template.title": "Copper Upgrade",
+  "item.patches-progression.iron_upgrade_smithing_template.title": "Iron Upgrade",
+  "item.patches-progression.gold_upgrade_smithing_template.title": "Gold Upgrade",
+  "item.patches-progression.rose_upgrade_smithing_template.title": "Rose Upgrade",
+  "item.patches-progression.diamond_upgrade_smithing_template.title": "Diamond Upgrade",
+
+  "item.patches-progression.smithing_template.copper_slot_description": "Add Chainmail Armor",
+  "item.patches-progression.smithing_template.iron_slot_description":   "Add Chainmail Armor",
+  "item.patches-progression.smithing_template.gold_slot_description":   "Add Chainmail Armor",
+  "item.patches-progression.smithing_template.rose_base_slot":          "Add Golden Armor, Weapon or Tool",
+  "item.patches-progression.smithing_template.diamond_base_slot":       "Add Iron Armor, Weapon or Tool",
+
+  "item.patches-progression.smithing_template.copper_additions_slot":   "Add Copper Ingot",
+  "item.patches-progression.smithing_template.iron_additions_slot":     "Add Iron Ingot",
+  "item.patches-progression.smithing_template.gold_additions_slot":     "Add Gold Ingot",
+  "item.patches-progression.smithing_template.rose_additions_slot":     "Add Rose Ingot",
+  "item.patches-progression.smithing_template.diamond_additions_slot":  "Add Diamond",
+
+  "item.patches-progression.copper_upgrade_template":   "Smithing Template",
+  "item.patches-progression.iron_upgrade_template":     "Smithing Template",
+  "item.patches-progression.gold_upgrade_template":     "Smithing Template",
+  "item.patches-progression.rose_upgrade_template":     "Smithing Template",
+  "item.patches-progression.diamond_upgrade_template":  "Smithing Template"
 }

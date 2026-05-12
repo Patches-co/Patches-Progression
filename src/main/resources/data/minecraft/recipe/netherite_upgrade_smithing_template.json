@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "M": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherrack"
+    },
+    "S": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    }
+  },
+  "pattern": [
+    "MSM",
+    "#C#",
+    "M#M"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:netherite_upgrade_smithing_template"
+  }
+}
