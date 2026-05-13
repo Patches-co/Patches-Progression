@@ -14,18 +14,21 @@ import java.util.List;
 public class ModItems {
 
     // ICONS
-    private static final List<Identifier> EMPTY_ARMOR_SLOTS = List.of(
+    private static final List<Identifier> EMPTY_BASE_SLOTS = List.of(
             Identifier.of("item/empty_armor_slot_helmet"),
             Identifier.of("item/empty_armor_slot_chestplate"),
             Identifier.of("item/empty_armor_slot_leggings"),
-            Identifier.of("item/empty_armor_slot_boots")
-    );
-    private static final List<Identifier> EMPTY_TOOL_SLOTS = List.of(
+            Identifier.of("item/empty_armor_slot_boots"),
             Identifier.of("item/empty_slot_sword"),
             Identifier.of("item/empty_slot_pickaxe"),
             Identifier.of("item/empty_slot_axe"),
             Identifier.of("item/empty_slot_hoe"),
             Identifier.of("item/empty_slot_shovel")
+    );
+
+    private static final List<Identifier> EMPTY_ADDITION_SLOTS = List.of(
+            Identifier.of("item/empty_slot_diamond"),
+            Identifier.of("item/empty_slot_ingot")
     );
 
     // --- SMITHING TEMPLATES ---
@@ -40,9 +43,9 @@ public class ModItems {
 
     // --- ROSE ---
     public static final Item ROSE_NUGGET = registerItem("rose_nugget", new Item(new Item.Settings()));
-    public static final Item RAW_ROSE_NUGGET = registerItem("raw_rose_nugget", new Item(new Item.Settings()));
+    //public static final Item RAW_ROSE_NUGGET = registerItem("raw_rose_nugget", new Item(new Item.Settings()));
     public static final Item ROSE_INGOT = registerItem("rose_ingot", new Item(new Item.Settings()));
-    public static final Item RAW_ROSE = registerItem("raw_rose", new Item(new Item.Settings()));
+    //public static final Item RAW_ROSE = registerItem("raw_rose", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -53,7 +56,9 @@ public class ModItems {
         PatchesProgression.LOGGER.info("Registering Mods Items for " + PatchesProgression.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(CHAINMAIL_SHEET);
+            fabricItemGroupEntries.addBefore(Items.LEATHER, CHAINMAIL_SHEET);
+            fabricItemGroupEntries.addAfter(Items.GOLD_INGOT, ROSE_INGOT);
+            fabricItemGroupEntries.addAfter(Items.GOLD_NUGGET, ROSE_NUGGET);
             fabricItemGroupEntries.addBefore(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,
                     COPPER_UPGRADE_SMITHING_TEMPLATE, GOLD_UPGRADE_SMITHING_TEMPLATE,
                     IRON_UPGRADE_SMITHING_TEMPLATE, ROSE_UPGRADE_SMITHING_TEMPLATE,
@@ -68,6 +73,6 @@ public class ModItems {
             Text.translatable("item.patches-progression." + name + "_upgrade_smithing_template.title").formatted(Formatting.GRAY),
             Text.translatable("item.patches-progression.smithing_template." + name + "_base_slot"),
             Text.translatable("item.patches-progression.smithing_template." + ingredientKey + "_additions_slot"),
-            EMPTY_TOOL_SLOTS, EMPTY_ARMOR_SLOTS));
+            EMPTY_BASE_SLOTS, EMPTY_ADDITION_SLOTS));
     }
 }
