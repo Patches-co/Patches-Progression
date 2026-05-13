@@ -35,7 +35,6 @@ public class ModItems {
     public static final Item COPPER_UPGRADE_SMITHING_TEMPLATE = createTemplate("copper", "copper");
     public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = createTemplate("iron", "iron");
     public static final Item GOLD_UPGRADE_SMITHING_TEMPLATE = createTemplate("gold", "gold");
-    public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = createTemplate("rose", "rose");
     public static final Item DIAMOND_UPGRADE_SMITHING_TEMPLATE = createTemplate("diamond", "diamond");
 
     // --- CHAINMAIL ---
@@ -43,9 +42,10 @@ public class ModItems {
 
     // --- ROSE ---
     public static final Item ROSE_NUGGET = registerItem("rose_nugget", new Item(new Item.Settings()));
-    //public static final Item RAW_ROSE_NUGGET = registerItem("raw_rose_nugget", new Item(new Item.Settings()));
+    public static final Item RAW_ROSE_NUGGET = registerItem("raw_rose_nugget", new Item(new Item.Settings()));
     public static final Item ROSE_INGOT = registerItem("rose_ingot", new Item(new Item.Settings()));
-    //public static final Item RAW_ROSE = registerItem("raw_rose", new Item(new Item.Settings()));
+    public static final Item RAW_ROSE = registerItem("raw_rose", new Item(new Item.Settings()));
+    public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = createTemplate("rose", "rose");
 
 
     private static Item registerItem(String name, Item item) {
