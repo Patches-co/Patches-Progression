@@ -32,6 +32,12 @@ public class ModItemModifiers {
                     });
                 }
             });
+            context.modify(item -> item instanceof net.minecraft.item.ToolItem, (builder, item) -> {
+                net.minecraft.item.ToolItem tool = (net.minecraft.item.ToolItem) item;
+                if (tool.getMaterial() == net.minecraft.item.ToolMaterials.GOLD) {
+                    builder.add(DataComponentTypes.MAX_DAMAGE, 97);
+                }
+            });
         });
     }
 }
