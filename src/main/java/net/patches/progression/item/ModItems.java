@@ -37,15 +37,19 @@ public class ModItems {
     public static final Item GOLD_UPGRADE_SMITHING_TEMPLATE = createTemplate("gold", "gold");
     public static final Item DIAMOND_UPGRADE_SMITHING_TEMPLATE = createTemplate("diamond", "diamond");
 
-    // --- CHAINMAIL ---
+    // --- SHEETS ---
     public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
+    public static final Item COPPER_SHEET = registerItem("copper_sheet", new Item(new Item.Settings()));
+    public static final Item IRON_SHEET = registerItem("iron_sheet", new Item(new Item.Settings()));
+    public static final Item GOLD_SHEET = registerItem("gold_sheet", new Item(new Item.Settings()));
 
-    // --- ROSE ---
-    public static final Item ROSE_NUGGET = registerItem("rose_nugget", new Item(new Item.Settings()));
-    public static final Item RAW_ROSE_NUGGET = registerItem("raw_rose_nugget", new Item(new Item.Settings()));
-    public static final Item ROSE_INGOT = registerItem("rose_ingot", new Item(new Item.Settings()));
-    public static final Item RAW_ROSE = registerItem("raw_rose", new Item(new Item.Settings()));
-    public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = createTemplate("rose", "rose");
+    // METAL NUGGETS
+    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new Item.Settings()));
+    public static final Item RAW_COPPER_NUGGET = registerItem("raw_copper_nugget", new Item(new Item.Settings()));
+    public static final Item RAW_IRON_NUGGET = registerItem("raw_iron_nugget", new Item(new Item.Settings()));
+    public static final Item RAW_GOLD_NUGGET = registerItem("raw_gold_nugget", new Item(new Item.Settings()));
+
+    public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -56,13 +60,13 @@ public class ModItems {
         PatchesProgression.LOGGER.info("Registering Mods Items for " + PatchesProgression.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.addBefore(Items.LEATHER, CHAINMAIL_SHEET);
-            fabricItemGroupEntries.addAfter(Items.GOLD_INGOT, ROSE_INGOT);
-            fabricItemGroupEntries.addAfter(Items.GOLD_NUGGET, ROSE_NUGGET);
+            fabricItemGroupEntries.addAfter(Items.RABBIT_HIDE, CHAINMAIL_SHEET, IRON_SHEET, COPPER_SHEET, GOLD_SHEET);
+            fabricItemGroupEntries.addBefore(Items.COAL, RAW_IRON_NUGGET, RAW_COPPER_NUGGET, RAW_GOLD_NUGGET);
+            fabricItemGroupEntries.addAfter(Items.IRON_NUGGET, COPPER_NUGGET);
             fabricItemGroupEntries.addBefore(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,
                     COPPER_UPGRADE_SMITHING_TEMPLATE, GOLD_UPGRADE_SMITHING_TEMPLATE,
-                    IRON_UPGRADE_SMITHING_TEMPLATE, ROSE_UPGRADE_SMITHING_TEMPLATE,
-                    DIAMOND_UPGRADE_SMITHING_TEMPLATE);
+                    IRON_UPGRADE_SMITHING_TEMPLATE, DIAMOND_UPGRADE_SMITHING_TEMPLATE);
+            fabricItemGroupEntries.addBefore(Items.DIAMOND, DIAMOND_SHARD);
         });
     }
 

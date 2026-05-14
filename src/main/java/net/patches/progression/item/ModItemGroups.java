@@ -15,7 +15,7 @@ import net.patches.progression.block.ModBlocks;
 public class ModItemGroups {
     public static final ItemGroup PATCHES_PROGRESSION = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(PatchesProgression.MOD_ID, "patches_progression"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.ROSE_BLOCK))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.DIAMOND_UPGRADE_SMITHING_TEMPLATE))
                     .displayName(Text.translatable("itemgroup.patches-progression.patches_progression"))
                     .entries((displayContext, entries) -> {
                         for (Item item : Registries.ITEM) {

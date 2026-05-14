@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "ingredients",
+  "category": "equipment",
   "key": {
     "#": {
       "item": "patches-progression:gold_upgrade_template"
@@ -8,14 +8,17 @@
     "M": {
       "item": "minecraft:gold_ingot"
     },
+    "L": {
+      "item": "minecraft:leather"
+    },
     "S": {
       "item": "minecraft:stone"
     }
   },
   "pattern": [
     "M#M",
-    "MSM",
-    "MMM"
+    "LSL",
+    "MLM"
   ],
   "result": {
     "count": 2,

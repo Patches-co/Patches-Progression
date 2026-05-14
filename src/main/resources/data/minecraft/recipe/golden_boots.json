@@ -1,16 +1,16 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "patches-progression:iron_sheet"
+    "item": "patches-progression:gold_sheet"
   },
   "base": {
     "item": "minecraft:chainmail_boots"
   },
   "result": {
     "count": 1,
-    "id": "minecraft:iron_boots"
+    "id": "minecraft:golden_boots"
   },
   "template": {
-    "item": "patches-progression:iron_upgrade_template"
+    "item": "patches-progression:gold_upgrade_template"
   }
 }

@@ -1,11 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "ingredients",
+  "category": "equipment",
   "key": {
     "#": {
       "item": "patches-progression:diamond_upgrade_template"
     },
     "M": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
       "item": "minecraft:diamond"
     },
     "S": {
@@ -13,9 +16,9 @@
     }
   },
   "pattern": [
-    "M#M",
+    "D#D",
     "MSM",
-    "MMM"
+    "DMD"
   ],
   "result": {
     "count": 2,

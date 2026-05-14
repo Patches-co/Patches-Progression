@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "gold_ingot",
+  "ingredient": {
+    "item": "patches-progression:raw_gold_nugget"
+  },
+  "result": {
+    "id": "minecraft:gold_nugget"
+  }
+}

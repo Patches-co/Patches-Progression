@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "ingredients",
+  "category": "misc",
   "key": {
     "#": {
       "item": "minecraft:iron_nugget"
