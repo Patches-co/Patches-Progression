@@ -15,32 +15,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.patches.progression.PatchesProgression;
 
 public class ModBlocks {
-    /*
-    public static final Block NETHER_ROSE_ORE = registerBlock("nether_rose_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
 
-    public static final Block BLACKSTONE_ROSE_ORE = registerBlock("blackstone_rose_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
-
-    public static final Block RAW_ROSE_BLOCK = registerBlock("raw_rose_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
-
-    public static final Block ROSE_BLOCK = registerBlock("rose_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-
-    public static final Block POLISHED_ROSE = registerBlock("polished_rose",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-
-    public static final Block POLISHED_CUT_ROSE = registerBlock("polished_cut_rose",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-
-    */
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(PatchesProgression.MOD_ID, name), block);
@@ -54,16 +29,5 @@ public class ModBlocks {
     public static void registerModBlocks() {
         PatchesProgression.LOGGER.info("Registering Mod Blocks for " + PatchesProgression.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
-                //fabricItemGroupEntries.add(ModBlocks.NETHER_ROSE_ORE);
-                //fabricItemGroupEntries.add(ModBlocks.BLACKSTONE_ROSE_ORE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
-            /*fabricItemGroupEntries.add(ModBlocks.ROSE_BLOCK);
-            fabricItemGroupEntries.add(ModBlocks.RAW_ROSE_BLOCK);
-            fabricItemGroupEntries.add(ModBlocks.POLISHED_ROSE);
-            fabricItemGroupEntries.add(ModBlocks.POLISHED_CUT_ROSE);*/
-        });
     }
 }

@@ -3,6 +3,7 @@ package net.patches.progression;
 import net.fabricmc.api.ModInitializer;
 
 import net.patches.progression.block.ModBlocks;
+import net.patches.progression.event.ModItemModifiers;
 import net.patches.progression.item.ModItemGroups;
 import net.patches.progression.item.ModItems;
 import org.slf4j.Logger;
@@ -14,10 +15,11 @@ public class PatchesProgression implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-        ModItemGroups.registerItemGroups();
-
         ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
+		ModItemModifiers.registerModifiers();
         ModBlocks.registerModBlocks();
+
 
 		LOGGER.info("Hello Fabric world!");
 	}

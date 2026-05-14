@@ -3,7 +3,8 @@
 	"package": "net.patches.progression.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"ArmorMaterialMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
