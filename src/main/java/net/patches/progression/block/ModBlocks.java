@@ -28,6 +28,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         PatchesProgression.LOGGER.info("Registering Mod Blocks for " + PatchesProgression.MOD_ID);
-
     }
 }
