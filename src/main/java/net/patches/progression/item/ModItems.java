@@ -48,9 +48,17 @@ public class ModItems {
     public static final Item RAW_COPPER_NUGGET = registerItem("raw_copper_nugget", new Item(new Item.Settings()));
     public static final Item RAW_IRON_NUGGET = registerItem("raw_iron_nugget", new Item(new Item.Settings()));
     public static final Item RAW_GOLD_NUGGET = registerItem("raw_gold_nugget", new Item(new Item.Settings()));
-
     public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
 
+    // COPPER ARMOR
+    public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(11))));
+    public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(11))));
+    public static final Item COPPER_LEGGINGS = registerItem("copper_leggings", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(11))));
+    public static final Item COPPER_BOOTS = registerItem("copper_boots", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(11))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(PatchesProgression.MOD_ID, name), item);

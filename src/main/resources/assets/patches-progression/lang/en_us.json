@@ -10,6 +10,11 @@
   "item.patches-progression.raw_gold_nugget": "Raw Gold Nugget",
   "item.patches-progression.diamond_shard": "Diamond Shard",
 
+  "item.patches-progression.copper_helmet": "Copper Helmet",
+  "item.patches-progression.copper_chestplate": "Copper Chestplate",
+  "item.patches-progression.copper_leggings": "Copper Leggings",
+  "item.patches-progression.copper_boots": "Copper Boots",
+
   "itemgroup.patches-progression.patches_progression": "Patches Progression Items",
 
   "tooltip.patches-progression.copper_upgrade.applies_to" : "Chainmail Armor",
