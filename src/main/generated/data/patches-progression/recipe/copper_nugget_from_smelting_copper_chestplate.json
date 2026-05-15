@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "copper_ingot",
+  "ingredient": {
+    "item": "patches-progression:copper_chestplate"
+  },
+  "result": {
+    "id": "patches-progression:copper_nugget"
+  }
+}
