@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "patches-progression:copper_sheet"
+    "item": "patches-progression:copper_bar"
   },
   "base": {
     "item": "minecraft:chainmail_chestplate"
