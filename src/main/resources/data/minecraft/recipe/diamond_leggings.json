@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "minecraft:diamond"
+    "item": "patches-progression:diamond_bar"
   },
   "base": {
     "item": "minecraft:iron_leggings"

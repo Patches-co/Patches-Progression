@@ -3,14 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
+    "###",
     "###"
   ],
   "result": {
     "count": 1,
-    "id": "patches-progression:copper_sheet"
+    "id": "patches-progression:gold_bar"
   }
 }

@@ -31,24 +31,28 @@ public class ModItems {
             Identifier.of("item/empty_slot_ingot")
     );
 
-    // --- SMITHING TEMPLATES ---
+    // SMITHING TEMPLATES
     public static final Item COPPER_UPGRADE_SMITHING_TEMPLATE = createTemplate("copper", "copper");
     public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = createTemplate("iron", "iron");
     public static final Item GOLD_UPGRADE_SMITHING_TEMPLATE = createTemplate("gold", "gold");
     public static final Item DIAMOND_UPGRADE_SMITHING_TEMPLATE = createTemplate("diamond", "diamond");
 
-    // --- SHEETS ---
-    public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
-    public static final Item COPPER_SHEET = registerItem("copper_sheet", new Item(new Item.Settings()));
-    public static final Item IRON_SHEET = registerItem("iron_sheet", new Item(new Item.Settings()));
-    public static final Item GOLD_SHEET = registerItem("gold_sheet", new Item(new Item.Settings()));
-
-    // METAL NUGGETS
+    // NUGGETS
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new Item.Settings()));
-    public static final Item RAW_COPPER_NUGGET = registerItem("raw_copper_nugget", new Item(new Item.Settings()));
-    public static final Item RAW_IRON_NUGGET = registerItem("raw_iron_nugget", new Item(new Item.Settings()));
-    public static final Item RAW_GOLD_NUGGET = registerItem("raw_gold_nugget", new Item(new Item.Settings()));
+    //public static final Item RAW_COPPER_NUGGET = registerItem("raw_copper_nugget", new Item(new Item.Settings()));
+    //public static final Item RAW_IRON_NUGGET = registerItem("raw_iron_nugget", new Item(new Item.Settings()));
+    //public static final Item RAW_GOLD_NUGGET = registerItem("raw_gold_nugget", new Item(new Item.Settings()));
     public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
+
+    // SHEETS
+    public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
+
+
+    // BARS
+    public static final Item COPPER_BAR = registerItem("copper_bar", new Item(new Item.Settings()));
+    public static final Item IRON_BAR = registerItem("iron_bar", new Item(new Item.Settings()));
+    public static final Item GOLD_BAR = registerItem("gold_bar", new Item(new Item.Settings()));
+    public static final Item DIAMOND_BAR = registerItem("diamond_bar", new Item(new Item.Settings()));
 
     // COPPER ARMOR
     public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
@@ -68,13 +72,24 @@ public class ModItems {
         PatchesProgression.LOGGER.info("Registering Mods Items for " + PatchesProgression.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.addAfter(Items.RABBIT_HIDE, CHAINMAIL_SHEET, IRON_SHEET, COPPER_SHEET, GOLD_SHEET);
-            fabricItemGroupEntries.addBefore(Items.COAL, RAW_IRON_NUGGET, RAW_COPPER_NUGGET, RAW_GOLD_NUGGET);
+            fabricItemGroupEntries.addAfter(Items.RABBIT_HIDE, CHAINMAIL_SHEET);
+
             fabricItemGroupEntries.addAfter(Items.IRON_NUGGET, COPPER_NUGGET);
+            fabricItemGroupEntries.addBefore(Items.DIAMOND, DIAMOND_SHARD);
+
             fabricItemGroupEntries.addBefore(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,
                     COPPER_UPGRADE_SMITHING_TEMPLATE, GOLD_UPGRADE_SMITHING_TEMPLATE,
                     IRON_UPGRADE_SMITHING_TEMPLATE, DIAMOND_UPGRADE_SMITHING_TEMPLATE);
-            fabricItemGroupEntries.addBefore(Items.DIAMOND, DIAMOND_SHARD);
+
+            fabricItemGroupEntries.addAfter(Items.COPPER_INGOT, COPPER_BAR);
+            fabricItemGroupEntries.addAfter(Items.GOLD_INGOT, GOLD_BAR);
+            fabricItemGroupEntries.addAfter(Items.IRON_INGOT, IRON_BAR);
+            fabricItemGroupEntries.addAfter(Items.DIAMOND, DIAMOND_BAR);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.addAfter(Items.CHAINMAIL_BOOTS,
+                    COPPER_HELMET, COPPER_LEGGINGS, COPPER_CHESTPLATE, COPPER_BOOTS);
         });
     }
 

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_sheet": {
+    "has_copper_bar": {
       "conditions": {
         "items": [
           {
-            "items": "patches-progression:copper_sheet"
+            "items": "patches-progression:copper_bar"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_sheet"
+      "has_copper_bar"
     ]
   ],
   "rewards": {

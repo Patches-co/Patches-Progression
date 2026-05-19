@@ -3,14 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
+    "###",
     "###"
   ],
   "result": {
     "count": 1,
-    "id": "patches-progression:gold_sheet"
+    "id": "patches-progression:iron_bar"
   }
 }
