@@ -1,17 +1,29 @@
 # Patche&#39;s Progression
+### Items novos ou substituídos:
+- Ferramentas de madeira substituídas por ferramentas de Flint;
+- Ferramentas de pedra substitídas por ferramentas de Cobre;
+- Adicionada receita para armadura de malhas;
+- Receita de Armaduras modificada [Agora exige uma armadura de base, smithing templates e uma barra do material alvo]. 
 
 ### Valores de Armadura Modificados
 
 | Material | Elmo | Peitoral | Calças | Botas | Total | Bónus Especial |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Couro** | 1 | 3 | 2 | 1 | **6** | - |
-| **Malha** | 1 | 3 | 3 | 1 | **7** | - |
-| **Ouro*** | 2 | 4 | 4 | 1 | **11** | - |
-| **Cobre** | 2 | 5 | 4 | 1 | **12** | - |
-| **Rose*** | 3 | 5 | 5 | 2 | **15** | +1 AT por peça |
-| **Ferro** | 3 | 6 | 5 | 2 | **16** | - |
-| **Diamante** | 4 | 7 | 6 | 3 | **20** | - |
-| **Netherite*** | 4 | 7 | 6 | 3 | **20** | +2 AT por peça |
+| **Couro** | 1 | 3 | 2 | 1 | **7** | - |
+| **Malha** | 1 | 3 | 2 | 1 | **7** | - |
+| **Ouro*** | 2 | 4 | 3 | 2 | **11** | - |
+| **Cobre[NEW]** | 2 | 4 | 3 | 2 | **11** | - |
+| **Ferro** | 3 | 5 | 4 | 3 | **15** | - |
+| **Diamante** | 4 | 7 | 5 | 4 | **20** | +1 AT p/peça |
+| **Netherite*** | 4 | 7 | 5 | 4 | **20** | +2 AT p/peça |
+
+### Valores de Durabilidade
+- Armaduras e Ferramentas de ouro consideravelmente mais resistentes;
+- Armadura de Malha com durabilidade diminuída;
+- Armaduras de Cobra com durabilidade entre Ouro e Ferro.
+
+### Geração de Mundo
+- Flint Pebbles gerados acima de blocos de cascalhos, em cavernas, rios e no fundo do oceano.
 
 ## Setup
 
