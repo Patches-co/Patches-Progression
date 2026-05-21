@@ -35,9 +35,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public static void offerCopperUpgradeRecipe(RecipeExporter exporter, Item input, RecipeCategory category, Item result) {
         SmithingTransformRecipeJsonBuilder.create(
-                        Ingredient.ofItems(ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(input), Ingredient.ofItems(ModItems.COPPER_SHEET), category, result
+                        Ingredient.ofItems(ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(input), Ingredient.ofItems(ModItems.COPPER_BAR), category, result
                 )
-                .criterion("has_copper_sheet", conditionsFromItem(ModItems.COPPER_SHEET))
+                .criterion("has_copper_bar", conditionsFromItem(ModItems.COPPER_BAR))
                 .offerTo(exporter, getItemPath(result) + "_smithing");
     }
 }
