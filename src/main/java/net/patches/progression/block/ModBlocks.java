@@ -9,16 +9,25 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.patches.progression.PatchesProgression;
 import net.patches.progression.block.custom.PebbleBlock;
+import net.patches.progression.block.custom.RockBlock;
 
 public class ModBlocks {
 
     public static final Block FLINT_PEBBLE = registerBlockWithoutItem("flint_pebble",
             new PebbleBlock(AbstractBlock.Settings.create()
-                    .mapColor(MapColor.STONE_GRAY)
-                    .nonOpaque()
-                    .noCollision()
-                    .breakInstantly()
-                    .sounds(BlockSoundGroup.BASALT)));
+                .mapColor(MapColor.STONE_GRAY)
+                .nonOpaque()
+                .noCollision()
+                .breakInstantly()
+                .sounds(BlockSoundGroup.BASALT)));
+
+    public static final Block ROCK_PEBBLE = registerBlock("rock_pebble",
+            new RockBlock(AbstractBlock.Settings.create()
+                .mapColor(MapColor.STONE_GRAY)
+                .nonOpaque()
+                .noCollision()
+                .breakInstantly()
+                .sounds(BlockSoundGroup.STONE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

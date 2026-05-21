@@ -1,10 +1,12 @@
 {
   "block.patches-progression.flint_pebble": "Flint Pebble",
+  "block.patches-progression.rock_pebble": "Rock",
 
   "item.patches-progression.chainmail_sheet": "Chainmail Sheet",
-  "item.patches-progression.copper_sheet": "Copper Sheet",
-  "item.patches-progression.iron_sheet": "Iron Sheet",
-  "item.patches-progression.gold_sheet": "Gold Sheet",
+  "item.patches-progression.copper_bar": "Copper Bar",
+  "item.patches-progression.iron_bar": "Iron Bar",
+  "item.patches-progression.gold_bar": "Gold Bar",
+  "item.patches-progression.diamond_bar": "Diamond Bar",
 
   "item.patches-progression.copper_nugget": "Copper Nugget",
   "item.patches-progression.raw_copper_nugget": "Raw Copper Nugget",

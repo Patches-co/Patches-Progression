@@ -1,0 +1,8 @@
+{
+  "type": "patches-progression:rock_pebble",
+  "config": {
+    "tries": 8,
+    "xz_spread": 14,
+    "y_spread": 0
+  }
+}

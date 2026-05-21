@@ -20,6 +20,11 @@ public class ModWorldGeneration {
             Identifier.of(PatchesProgression.MOD_ID, "flint_pebble_gravel")
     );
 
+    public static final RegistryKey<PlacedFeature> ROCK_PEBBLE_PLACED_KEY = RegistryKey.of(
+            RegistryKeys.PLACED_FEATURE,
+            Identifier.of(PatchesProgression.MOD_ID, "rock_pebble")
+    );
+
     public static void register() {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
@@ -31,6 +36,12 @@ public class ModWorldGeneration {
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 FLINT_PEBBLE_GRAVEL_PLACED_KEY
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ROCK_PEBBLE_PLACED_KEY
         );
     }
 }

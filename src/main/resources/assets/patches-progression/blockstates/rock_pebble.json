@@ -1,0 +1,24 @@
+{
+  "multipart": [
+    { "when": { "type": "small", "facing": "north" }, "apply": { "model": "patches-progression:block/rock_pebble_small" } },
+    { "when": { "type": "small", "facing": "east" }, "apply": { "model": "patches-progression:block/rock_pebble_small", "y": 90 } },
+    { "when": { "type": "small", "facing": "south" }, "apply": { "model": "patches-progression:block/rock_pebble_small", "y": 180 } },
+    { "when": { "type": "small", "facing": "west" }, "apply": { "model": "patches-progression:block/rock_pebble_small", "y": 270 } },
+
+    { "when": { "type": "medium", "facing": "north" }, "apply": { "model": "patches-progression:block/rock_pebble_medium" } },
+    { "when": { "type": "medium", "facing": "east" }, "apply": { "model": "patches-progression:block/rock_pebble_medium", "y": 90 } },
+    { "when": { "type": "medium", "facing": "south" }, "apply": { "model": "patches-progression:block/rock_pebble_medium", "y": 180 } },
+    { "when": { "type": "medium", "facing": "west" }, "apply": { "model": "patches-progression:block/rock_pebble_medium", "y": 270 } },
+
+    { "when": { "type": "large", "facing": "north" }, "apply": { "model": "patches-progression:block/rock_pebble_large" } },
+    { "when": { "type": "large", "facing": "east" }, "apply": { "model": "patches-progression:block/rock_pebble_large", "y": 90 } },
+    { "when": { "type": "large", "facing": "south" }, "apply": { "model": "patches-progression:block/rock_pebble_large", "y": 180 } },
+    { "when": { "type": "large", "facing": "west" }, "apply": { "model": "patches-progression:block/rock_pebble_large", "y": 270 } },
+
+    { "when": { "type": "extra_large", "facing": "north" }, "apply": { "model": "patches-progression:block/rock_pebble_extra_large" } },
+    { "when": { "type": "extra_large", "facing": "east" }, "apply": { "model": "patches-progression:block/rock_pebble_extra_large", "y": 90 } },
+    { "when": { "type": "extra_large", "facing": "south" }, "apply": { "model": "patches-progression:block/rock_pebble_extra_large", "y": 180 } },
+    { "when": { "type": "extra_large", "facing": "west" }, "apply": { "model": "patches-progression:block/rock_pebble_extra_large", "y": 270 } }
+
+  ]
+}

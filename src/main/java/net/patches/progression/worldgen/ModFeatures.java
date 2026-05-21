@@ -12,6 +12,11 @@ public class ModFeatures {
             Identifier.of(PatchesProgression.MOD_ID, "flint_pebble"),
             new FlintPebbleFeature(FlintPebbleFeatureConfig.CODEC)
     );
+    public static final Feature<RockPebbleFeatureConfig> ROCK_PEBBLE = Registry.register(
+            Registries.FEATURE,
+            Identifier.of(PatchesProgression.MOD_ID, "rock_pebble"),
+            new RockPebbleFeature(RockPebbleFeatureConfig.CODEC)
+    );
 
     public static void register() {
         PatchesProgression.LOGGER.info("Registering Mod Features for " + PatchesProgression.MOD_ID);
