@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -30,6 +31,11 @@ public class ModWorldGeneration {
             Identifier.of(PatchesProgression.MOD_ID, "rock_pebble_grass")
     );
 
+    public static final RegistryKey<PlacedFeature> ROCK_PEBBLE_MOUNTAIN_PLACED_KEY = RegistryKey.of(
+            RegistryKeys.PLACED_FEATURE,
+            Identifier.of(PatchesProgression.MOD_ID, "rock_pebble_mountain")
+    );
+
     public static void register() {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
@@ -53,6 +59,12 @@ public class ModWorldGeneration {
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 ROCK_PEBBLE_GRASS_PLACED_KEY
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ROCK_PEBBLE_MOUNTAIN_PLACED_KEY
         );
     }
 }

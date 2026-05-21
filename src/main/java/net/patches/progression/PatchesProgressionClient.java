@@ -9,5 +9,6 @@ public class PatchesProgressionClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLINT_PEBBLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROCK_PEBBLE, RenderLayer.getCutout());
     }
 }
