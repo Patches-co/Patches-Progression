@@ -1,58 +1,8 @@
 {
-  "type": "minecraft:random_patch",
+  "type": "patches-progression:flint_pebble",
   "config": {
-    "tries": 64,
-    "xz_spread": 7,
-    "y_spread": 3,
-    "feature": {
-      "feature": {
-        "type": "minecraft:simple_block",
-        "config": {
-          "to_place": {
-            "type": "minecraft:weighted_state_provider",
-            "entries": [
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "patches-progression:flint_pebble",
-                  "Properties": {
-                    "type": "small",
-                    "facing": "north"
-                  }
-                }
-              },
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "patches-progression:flint_pebble",
-                  "Properties": {
-                    "type": "medium",
-                    "facing": "north"
-                  }
-                }
-              }
-            ]
-          }
-        }
-      },
-      "placement": [
-        {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:all_of",
-            "predicates": [
-              {
-                "type": "minecraft:matching_blocks",
-                "offset": [0, -1, 0],
-                "blocks": "minecraft:gravel"
-              },
-              {
-                "type": "minecraft:replaceable"
-              }
-            ]
-          }
-        }
-      ]
-    }
+    "tries": 4,
+    "xz_spread": 14,
+    "y_spread": 2
   }
 }

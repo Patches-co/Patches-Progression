@@ -15,23 +15,7 @@
     },
     {
       "type": "minecraft:count",
-      "count": 80
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [0, -1, 0],
-            "blocks": "minecraft:gravel"
-          },
-          {
-            "type": "minecraft:replaceable"
-          }
-        ]
-      }
+      "count": 12
     },
     {
       "type": "minecraft:biome"

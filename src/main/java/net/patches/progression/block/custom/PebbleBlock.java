@@ -76,7 +76,11 @@ public class PebbleBlock extends Block implements Waterloggable {
 
     @Override
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
-        if (!world.isClient && !state.get(WATERLOGGED) && isSurroundedByWater(world, pos)) {
+        if (world.isClient || state.get(WATERLOGGED)) {
+            return;
+        }
+
+        if (world.getFluidState(pos).getFluid() == Fluids.WATER || isSurroundedByWater(world, pos)) {
             world.setBlockState(pos, state.with(WATERLOGGED, true), NOTIFY_LISTENERS);
         }
     }
