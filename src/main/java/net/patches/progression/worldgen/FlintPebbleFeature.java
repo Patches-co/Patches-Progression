@@ -57,7 +57,7 @@ public class FlintPebbleFeature extends Feature<FlintPebbleFeatureConfig> {
         }
 
         boolean waterlogged = world.getFluidState(pos).getFluid() == Fluids.WATER;
-        FlintVariants variant = random.nextBoolean() ? FlintVariants.SMALL : FlintVariants.MEDIUM;
+        FlintVariants variant = FlintVariants.random(random);
         Direction facing = Direction.Type.HORIZONTAL.random(random);
 
         BlockState state = ModBlocks.FLINT_PEBBLE.getDefaultState()

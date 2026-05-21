@@ -4,7 +4,6 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.FluidFillable;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
@@ -36,7 +35,9 @@ public class PebbleBlock extends Block implements Waterloggable {
     public static final EnumProperty<FlintVariants> FLINT_TYPE = EnumProperty.of("type", FlintVariants.class);
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 3.0, 12.0);
+    private static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(7.0, 0.0, 7.0, 11.0, 1.0, 10.0);
+    private static final VoxelShape MEDIUM_SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 2.0, 11.0);
+    private static final VoxelShape CLUSTER_SHAPE = Block.createCuboidShape(4.0, 0.0, 5.0, 12.0, 2.0, 13.0);
 
     public PebbleBlock(Settings settings) {
         super(settings);
@@ -64,7 +65,7 @@ public class PebbleBlock extends Block implements Waterloggable {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         Random random = ctx.getWorld().getRandom();
-        FlintVariants variant = random.nextBoolean() ? FlintVariants.SMALL : FlintVariants.MEDIUM;
+        FlintVariants variant = FlintVariants.random(random);
         BlockPos pos = ctx.getBlockPos();
         boolean waterlogged = ctx.getWorld().getFluidState(pos).getFluid() == Fluids.WATER;
 
@@ -119,7 +120,11 @@ public class PebbleBlock extends Block implements Waterloggable {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
+        return switch (state.get(FLINT_TYPE)) {
+            case SMALL -> SMALL_SHAPE;
+            case MEDIUM -> MEDIUM_SHAPE;
+            case CLUSTER -> CLUSTER_SHAPE;
+        };
     }
 
     @Override
