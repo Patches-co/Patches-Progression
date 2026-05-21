@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 16
+      "count": 1
     },
     {
       "type": "minecraft:in_square"
@@ -31,8 +31,7 @@
             "type": "minecraft:matching_blocks",
             "offset": [0, -1, 0],
             "blocks": [
-              "minecraft:stone",
-              "minecraft:dirt"
+              "minecraft:grass_block"
             ]
           },
           {

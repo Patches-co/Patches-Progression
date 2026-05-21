@@ -22,6 +22,7 @@ public class RockBlock extends Block {
     public static final MapCodec<RockBlock> CODEC = createCodec(RockBlock::new);
     public static final EnumProperty<RockVariants> ROCK_TYPE = EnumProperty.of("type", RockVariants.class);
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+
     private static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(7.0, 0.0, 7.0, 11.0, 1.0, 10.0);
     private static final VoxelShape MEDIUM_SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 2.0, 11.0);
     private static final VoxelShape LARGE_SHAPE = Block.createCuboidShape(4.0, 0.0, 5.0, 12.0, 2.0, 13.0);
@@ -40,7 +41,10 @@ public class RockBlock extends Block {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (!world.getBlockState(pos.down()).isOf(Blocks.STONE)) {
+        BlockState below = world.getBlockState(pos.down());
+        boolean isValidGround = below.isOf(Blocks.STONE) || below.isOf(Blocks.DIRT) || below.isOf(Blocks.GRASS_BLOCK);
+
+        if (!isValidGround) {
             return false;
         }
 

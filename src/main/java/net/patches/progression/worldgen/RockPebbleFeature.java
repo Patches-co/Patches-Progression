@@ -49,7 +49,7 @@ public class RockPebbleFeature extends Feature<RockPebbleFeatureConfig>{
     private static boolean tryPlace(StructureWorldAccess world, BlockPos pos, Random random) {
         BlockState below = world.getBlockState(pos.down());
 
-        boolean isValidGround = below.isOf(Blocks.DIRT) || below.isOf(Blocks.COARSE_DIRT) || below.isOf(Blocks.STONE);
+        boolean isValidGround = below.isOf(Blocks.DIRT) || below.isOf(Blocks.GRASS_BLOCK) || below.isOf(Blocks.STONE);
 
         if (!isValidGround) {
             return false;
