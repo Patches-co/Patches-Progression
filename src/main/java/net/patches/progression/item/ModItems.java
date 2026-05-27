@@ -38,6 +38,7 @@ public class ModItems {
     public static final Item DIAMOND_UPGRADE_SMITHING_TEMPLATE = createTemplate("diamond", "diamond");
 
     // NUGGETS
+    public static final Item KNAPPED_ROCK = registerItem("knapped_rock", new Item(new Item.Settings()));
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new Item.Settings()));
     public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
 
@@ -60,6 +61,26 @@ public class ModItems {
             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(11))));
     public static final Item COPPER_BOOTS = registerItem("copper_boots", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(11))));
+
+    public static final Item COPPER_SWORD = registerItem("copper_sword",
+            new SwordItem(ModToolMaterials.COPPER, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.COPPER, 3, -2.4F))));
+
+    public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe",
+            new PickaxeItem(ModToolMaterials.COPPER, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.COPPER, 1, -2.8F))));
+
+    public static final Item COPPER_AXE = registerItem("copper_axe",
+            new AxeItem(ModToolMaterials.COPPER, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COPPER, 6, -3.2F))));
+
+    public static final Item COPPER_SHOVEL = registerItem("copper_shovel",
+            new ShovelItem(ModToolMaterials.COPPER, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.COPPER, 1.5F, -3.0F))));
+
+    public static final Item COPPER_HOE = registerItem("copper_hoe",
+            new HoeItem(ModToolMaterials.COPPER, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.COPPER, -1, -2.0F))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(PatchesProgression.MOD_ID, name), item);
@@ -87,6 +108,14 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.addAfter(Items.CHAINMAIL_BOOTS,
                     COPPER_HELMET, COPPER_LEGGINGS, COPPER_CHESTPLATE, COPPER_BOOTS);
+
+            fabricItemGroupEntries.addAfter(Items.STONE_SWORD, COPPER_SWORD);
+            fabricItemGroupEntries.addAfter(Items.STONE_AXE, COPPER_AXE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.addAfter(Items.STONE_HOE,
+                    COPPER_SHOVEL, COPPER_PICKAXE, COPPER_AXE, COPPER_HOE);
         });
     }
 

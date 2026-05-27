@@ -3,6 +3,8 @@ package net.patches.progression.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
@@ -10,8 +12,9 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.patches.progression.block.ModBlocks;
 import net.patches.progression.item.ModItems;
-
+ 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -31,6 +34,62 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_CHESTPLATE, RecipeCategory.COMBAT, ModItems.COPPER_CHESTPLATE);
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_LEGGINGS, RecipeCategory.COMBAT, ModItems.COPPER_LEGGINGS);
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_BOOTS, RecipeCategory.COMBAT, ModItems.COPPER_BOOTS);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.KNAPPED_ROCK).input(ModBlocks.ROCK_PEBBLE).input(Items.FLINT)
+                .criterion(hasItem(ModBlocks.ROCK_PEBBLE), conditionsFromItem(ModBlocks.ROCK_PEBBLE))
+                .offerTo(exporter);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.COMBAT, ModBlocks.ROCK_PEBBLE, RecipeCategory.BUILDING_BLOCKS, Items.COBBLESTONE);
+
+        // Espada de Cobre
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD, 1)
+                .pattern(" C ")
+                .pattern(" C ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
+        // Picareta de Cobre
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE, 1)
+                .pattern("CCC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
+        // Machado de Cobre
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_AXE, 1)
+                .pattern("CC ")
+                .pattern("CS ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
+        // Pá de Cobre
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_SHOVEL, 1)
+                .pattern(" C ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
+        // Enxada de Cobre
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HOE, 1)
+                .pattern("CC ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
     }
 
     public static void offerCopperUpgradeRecipe(RecipeExporter exporter, Item input, RecipeCategory category, Item result) {

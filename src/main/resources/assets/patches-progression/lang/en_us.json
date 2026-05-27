@@ -1,6 +1,7 @@
 {
   "block.patches-progression.flint_pebble": "Flint Pebble",
   "block.patches-progression.rock_pebble": "Rock",
+  "item.patches-progression.knapped_rock": "Knapped Rock",
 
   "item.patches-progression.chainmail_sheet": "Chainmail Sheet",
   "item.patches-progression.copper_bar": "Copper Bar",
@@ -18,6 +19,12 @@
   "item.patches-progression.copper_chestplate": "Copper Chestplate",
   "item.patches-progression.copper_leggings": "Copper Leggings",
   "item.patches-progression.copper_boots": "Copper Boots",
+
+  "item.patches-progression.copper_sword": "Copper Sword",
+  "item.patches-progression.copper_pickaxe": "Copper Pickaxe",
+  "item.patches-progression.copper_axe": "Copper Axe",
+  "item.patches-progression.copper_shovel": "Copper Shovel",
+  "item.patches-progression.copper_hoe": "Copper Hoe",
 
   "itemgroup.patches-progression.patches_progression": "Patches Progression Items",
 

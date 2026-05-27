@@ -15,4 +15,25 @@ public class ToolMaterialsMixin {
             cir.setReturnValue(1.0F);
         }
     }
+
+    @Inject(method = "getMiningSpeedMultiplier", at = @At("HEAD"), cancellable = true)
+    private void nerfStoneMiningSpeed(CallbackInfoReturnable<Float> cir) {
+        if ((Object) this == ToolMaterials.STONE) {
+            cir.setReturnValue(2.0F);
+        }
+    }
+
+    @Inject(method = "getAttackDamage", at = @At("HEAD"), cancellable = true)
+    private void nerfStoneAttackDamage(CallbackInfoReturnable<Float> cir) {
+        if ((Object) this == ToolMaterials.STONE) {
+            cir.setReturnValue(0.0F);
+        }
+    }
+
+    @Inject(method = "getDurability", at = @At("HEAD"), cancellable = true)
+    private void nerfStoneDurability(CallbackInfoReturnable<Integer> cir) {
+        if ((Object) this == ToolMaterials.STONE) {
+            cir.setReturnValue(59);
+        }
+    }
 }

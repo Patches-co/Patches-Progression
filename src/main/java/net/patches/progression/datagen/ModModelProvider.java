@@ -24,5 +24,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_BOOTS));
+
+        itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
     }
 }

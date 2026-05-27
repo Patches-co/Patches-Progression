@@ -20,5 +20,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.COPPER_CHESTPLATE)
                 .add(ModItems.COPPER_LEGGINGS)
                 .add(ModItems.COPPER_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.COPPER_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.COPPER_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.COPPER_AXE);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.COPPER_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.COPPER_HOE);
     }
 }
