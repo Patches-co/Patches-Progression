@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-27T13:23:48.4514978	Patche's Progression/Model Definitions
+// 1.21.1	2026-05-28T11:43:52.8314392	Patche's Progression/Model Definitions
 8734609180fdfc2e40c838deb92365c68a850816 assets\patches-progression\models\item\copper_boots_netherite_trim.json
 a878a89335945aeca972833c47d8477d58ddf548 assets\patches-progression\models\item\copper_chestplate_netherite_trim.json
 e164cae2ccb7eac99a121c759ab9dbb95e3335ee assets\patches-progression\models\item\copper_chestplate_quartz_trim.json
@@ -13,6 +13,7 @@ f344993bc140533ea4e44073476d62b1344a0abd assets\patches-progression\models\item\
 18ae16ef53eba2e0e0d80d317475ea74a2a6590f assets\patches-progression\models\item\copper_helmet_lapis_trim.json
 7f796bcf5c5f2e35ffaf415cc4be610526370a88 assets\patches-progression\models\item\copper_helmet_redstone_trim.json
 84132bc1ecce263f985a9f0e67abe2fbf6148b4e assets\patches-progression\models\item\copper_leggings_copper_trim.json
+930275b86f2215875ba61f8abde31bad1e3c3a30 assets\patches-progression\models\item\rotten_leather.json
 6f786a8a904d3fe4210e92f68dd48c44633c8c47 assets\patches-progression\models\item\copper_boots_diamond_trim.json
 c278158e22b92bf85df4d0a1b60b9848d74823a0 assets\patches-progression\models\item\copper_leggings_netherite_trim.json
 0d5e4ae53dfda76c7c259fdb8507941c7ede1ac0 assets\patches-progression\models\item\copper_helmet_diamond_trim.json

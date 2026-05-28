@@ -54,9 +54,9 @@ public class RockBlock extends Block {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        Random random = ctx.getWorld().getRandom();
-        RockVariants variant = RockVariants.random(random);
         BlockPos pos = ctx.getBlockPos();
+        net.minecraft.util.math.random.Random random = net.minecraft.util.math.random.Random.create(pos.asLong());
+        RockVariants variant = RockVariants.random(random);
 
         return this.getDefaultState()
                 .with(FACING, ctx.getHorizontalPlayerFacing().getOpposite())
@@ -90,5 +90,13 @@ public class RockBlock extends Block {
 
     public void cycleState(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, state.cycle(ROCK_TYPE), NOTIFY_LISTENERS);
+    }
+
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        if (!this.canPlaceAt(state, world, pos)) {
+            world.breakBlock(pos, true);
+        }
+        super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
     }
 }

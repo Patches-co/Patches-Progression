@@ -21,7 +21,7 @@ public class ModBlocks {
                 .breakInstantly()
                 .sounds(BlockSoundGroup.BASALT)));
 
-    public static final Block ROCK_PEBBLE = registerBlock("rock_pebble",
+    public static final Block ROCK_PEBBLE = registerBlockWithoutItem("rock_pebble",
             new RockBlock(AbstractBlock.Settings.create()
                 .mapColor(MapColor.STONE_GRAY)
                 .nonOpaque()

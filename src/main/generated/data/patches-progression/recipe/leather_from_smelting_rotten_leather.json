@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "group": "rotten_leather",
+  "ingredient": {
+    "item": "patches-progression:rotten_leather"
+  },
+  "result": {
+    "id": "minecraft:leather"
+  }
+}

@@ -142,6 +142,14 @@ public class PebbleBlock extends Block implements Waterloggable {
         builder.add(FACING, FLINT_TYPE, WATERLOGGED);
     }
 
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        if (!this.canPlaceAt(state, world, pos)) {
+            world.breakBlock(pos, true);
+        }
+        super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
+    }
+
     public void cycleState(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, state.cycle(FLINT_TYPE), NOTIFY_LISTENERS);
     }

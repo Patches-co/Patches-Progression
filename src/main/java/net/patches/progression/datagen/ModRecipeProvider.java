@@ -2,16 +2,14 @@ package net.patches.progression.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 import net.patches.progression.block.ModBlocks;
 import net.patches.progression.item.ModItems;
  
@@ -29,6 +27,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerBlasting(exporter, COPPER_ARMORS, RecipeCategory.MISC, ModItems.COPPER_NUGGET, 0.25f, 100, "copper_ingot");
         offerSmelting(exporter, COPPER_ARMORS, RecipeCategory.MISC, ModItems.COPPER_NUGGET, 0.25f, 200, "copper_ingot");
+        offerSmelting(exporter, List.of(ModItems.ROTTEN_LEATHER), RecipeCategory.MISC, Items.LEATHER, 0.15f, 200, "rotten_leather");
+
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(ModItems.ROTTEN_LEATHER), RecipeCategory.MISC, Items.LEATHER, 0.15f, 100)
+                .criterion(hasItem(ModItems.ROTTEN_LEATHER), conditionsFromItem(ModItems.ROTTEN_LEATHER))
+                .offerTo(exporter, Identifier.of("patches-progression", "leather_from_smoking"));
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(ModItems.ROTTEN_LEATHER), RecipeCategory.MISC, Items.LEATHER, 0.15f, 600)
+                .criterion(hasItem(ModItems.ROTTEN_LEATHER), conditionsFromItem(ModItems.ROTTEN_LEATHER))
+                .offerTo(exporter, Identifier.of("patches-progression", "leather_from_campfire"));
 
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_HELMET, RecipeCategory.COMBAT, ModItems.COPPER_HELMET);
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_CHESTPLATE, RecipeCategory.COMBAT, ModItems.COPPER_CHESTPLATE);
@@ -40,8 +46,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.COMBAT, ModBlocks.ROCK_PEBBLE, RecipeCategory.BUILDING_BLOCKS, Items.COBBLESTONE);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, ModItems.ROTTEN_LEATHER, Items.ROTTEN_FLESH);
 
-        // Espada de Cobre
+
+        // FERRAMENTAS DE COBRE
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD, 1)
                 .pattern(" C ")
                 .pattern(" C ")
@@ -51,7 +59,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
-        // Picareta de Cobre
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE, 1)
                 .pattern("CCC")
                 .pattern(" S ")
@@ -61,7 +68,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
-        // Machado de Cobre
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_AXE, 1)
                 .pattern("CC ")
                 .pattern("CS ")
@@ -71,7 +77,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
-        // Pá de Cobre
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_SHOVEL, 1)
                 .pattern(" C ")
                 .pattern(" S ")
@@ -81,7 +86,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
-        // Enxada de Cobre
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HOE, 1)
                 .pattern("CC ")
                 .pattern(" S ")

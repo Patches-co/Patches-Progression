@@ -27,7 +27,6 @@ public class PatchesProgression implements ModInitializer {
         ModFeatures.register();
         ModWorldGeneration.register();
 
-		// REMOVENDO FERRAMENTAS DE MADEIRA
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
 			entries.getDisplayStacks().removeIf(stack ->
 					stack.isOf(Items.WOODEN_PICKAXE) ||

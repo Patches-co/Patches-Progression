@@ -8,6 +8,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.patches.progression.PatchesProgression;
+import net.patches.progression.block.ModBlocks;
+import net.patches.progression.item.custom.KnappedRockItem;
+import net.patches.progression.item.custom.RockItem;
 
 import java.util.List;
 
@@ -38,12 +41,17 @@ public class ModItems {
     public static final Item DIAMOND_UPGRADE_SMITHING_TEMPLATE = createTemplate("diamond", "diamond");
 
     // NUGGETS
-    public static final Item KNAPPED_ROCK = registerItem("knapped_rock", new Item(new Item.Settings()));
+    public static final Item ROCK_PEBBLE = registerItem("rock_pebble",
+            new RockItem(ModBlocks.ROCK_PEBBLE, new Item.Settings()));
+    public static final Item KNAPPED_ROCK = registerItem("knapped_rock",
+            new KnappedRockItem(new Item.Settings()));
+
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new Item.Settings()));
     public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
 
     // SHEETS
     public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
+    public static final Item ROTTEN_LEATHER = registerItem("rotten_leather", new Item(new Item.Settings()));
 
 
     // BARS
@@ -103,6 +111,8 @@ public class ModItems {
             fabricItemGroupEntries.addAfter(Items.GOLD_INGOT, GOLD_BAR);
             fabricItemGroupEntries.addAfter(Items.IRON_INGOT, IRON_BAR);
             fabricItemGroupEntries.addAfter(Items.DIAMOND, DIAMOND_BAR);
+
+            fabricItemGroupEntries.addAfter(Items.FLINT, ModBlocks.ROCK_PEBBLE, KNAPPED_ROCK);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
