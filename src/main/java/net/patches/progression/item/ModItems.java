@@ -117,7 +117,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.addAfter(Items.CHAINMAIL_BOOTS,
-                    COPPER_HELMET, COPPER_LEGGINGS, COPPER_CHESTPLATE, COPPER_BOOTS);
+                    COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS);
 
             fabricItemGroupEntries.addAfter(Items.STONE_SWORD, COPPER_SWORD);
             fabricItemGroupEntries.addAfter(Items.STONE_AXE, COPPER_AXE);
