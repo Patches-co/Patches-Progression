@@ -47,7 +47,7 @@ public class ModItems {
             new KnappedRockItem(new Item.Settings()));
 
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new Item.Settings()));
-    public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
+    //public static final Item DIAMOND_SHARD = registerItem("diamond_shard", new Item(new Item.Settings()));
 
     // SHEETS
     public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
@@ -101,7 +101,7 @@ public class ModItems {
             fabricItemGroupEntries.addAfter(Items.RABBIT_HIDE, CHAINMAIL_SHEET);
 
             fabricItemGroupEntries.addAfter(Items.IRON_NUGGET, COPPER_NUGGET);
-            fabricItemGroupEntries.addBefore(Items.DIAMOND, DIAMOND_SHARD);
+            fabricItemGroupEntries.addBefore(Items.LEATHER, ROTTEN_LEATHER);
 
             fabricItemGroupEntries.addBefore(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,
                     COPPER_UPGRADE_SMITHING_TEMPLATE, GOLD_UPGRADE_SMITHING_TEMPLATE,
