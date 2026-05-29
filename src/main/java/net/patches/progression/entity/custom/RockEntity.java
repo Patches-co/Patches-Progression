@@ -6,6 +6,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -56,7 +57,7 @@ public class RockEntity extends ThrownItemEntity {
                 serverWorld.spawnParticles(
                         new net.minecraft.particle.BlockStateParticleEffect(net.minecraft.particle.ParticleTypes.BLOCK, net.minecraft.block.Blocks.STONE.getDefaultState()),
                         this.getX(), this.getY(), this.getZ(),
-                        10,
+                        8,
                         0.1, 0.1, 0.1,
                         0.05
                 );
@@ -75,14 +76,15 @@ public class RockEntity extends ThrownItemEntity {
 
             if (this.getWorld() instanceof net.minecraft.server.world.ServerWorld serverWorld) {
                 serverWorld.spawnParticles(
-                        new net.minecraft.particle.BlockStateParticleEffect(net.minecraft.particle.ParticleTypes.BLOCK, net.minecraft.block.Blocks.STONE.getDefaultState()),
+                        ParticleTypes.CRIT,
                         this.getX(), this.getY(), this.getZ(),
-                        5,
+                        3,
                         0.1, 0.1, 0.1,
                         0.05
                 );
             }
-            this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.BLOCK_STONE_HIT, net.minecraft.sound.SoundCategory.NEUTRAL, 1.0F, 1.2F);
+            //this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.BLOCK_STONE_HIT, net.minecraft.sound.SoundCategory.NEUTRAL, 1.0F, 1.2F);
+            this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_CRIT, net.minecraft.sound.SoundCategory.NEUTRAL, 0.6F, 1.0F);
             this.discard();
         }
     }

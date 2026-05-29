@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chainmail_sheet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "patches-progression:chainmail_sheet"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:chainmail_chestplate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chainmail_sheet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chainmail_helmet",
+      "minecraft:chainmail_chestplate",
+      "minecraft:chainmail_leggings",
+      "minecraft:chainmail_boots"
+    ]
+  }
+}

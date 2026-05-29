@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "patches-progression:copper_bar"
+  },
+  "base": {
+    "item": "minecraft:leather_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "patches-progression:copper_chestplate"
+  },
+  "template": {
+    "item": "patches-progression:copper_upgrade_template"
+  }
+}

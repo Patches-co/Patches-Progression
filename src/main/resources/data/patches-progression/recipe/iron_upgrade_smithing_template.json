@@ -16,9 +16,9 @@
     }
   },
   "pattern": [
-    "M#M",
-    "LSL",
-    "MLM"
+    "S#S",
+    "MLM",
+    "SMS"
   ],
   "result": {
     "count": 2,

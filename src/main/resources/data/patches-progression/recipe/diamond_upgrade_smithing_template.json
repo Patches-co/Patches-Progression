@@ -16,9 +16,9 @@
     }
   },
   "pattern": [
-    "D#D",
-    "MSM",
-    "DMD"
+    "S#S",
+    "DMD",
+    "SDS"
   ],
   "result": {
     "count": 2,

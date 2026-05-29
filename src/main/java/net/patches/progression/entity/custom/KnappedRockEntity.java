@@ -6,6 +6,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -55,7 +57,7 @@ public class KnappedRockEntity extends ThrownItemEntity {
                 serverWorld.spawnParticles(
                         new net.minecraft.particle.BlockStateParticleEffect(net.minecraft.particle.ParticleTypes.BLOCK, net.minecraft.block.Blocks.STONE.getDefaultState()),
                         this.getX(), this.getY(), this.getZ(),
-                        10, 0.1, 0.1, 0.1, 0.05
+                        8, 0.1, 0.1, 0.1, 0.05
                 );
             }
 
@@ -73,13 +75,14 @@ public class KnappedRockEntity extends ThrownItemEntity {
 
             if (this.getWorld() instanceof net.minecraft.server.world.ServerWorld serverWorld) {
                 serverWorld.spawnParticles(
-                        new net.minecraft.particle.BlockStateParticleEffect(net.minecraft.particle.ParticleTypes.BLOCK, net.minecraft.block.Blocks.STONE.getDefaultState()),
+                        ParticleTypes.CRIT,
                         this.getX(), this.getY(), this.getZ(),
                         5, 0.1, 0.1, 0.1, 0.05
                 );
             }
 
-            this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), net.minecraft.sound.SoundEvents.BLOCK_STONE_BREAK, net.minecraft.sound.SoundCategory.NEUTRAL, 1.0F, 1.2F);
+            //this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.BLOCK_STONE_HIT, net.minecraft.sound.SoundCategory.NEUTRAL, 1.0F, 1.2F);
+            this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), net.minecraft.sound.SoundEvents.BLOCK_STONE_BREAK, net.minecraft.sound.SoundCategory.NEUTRAL, 0.6F, 1.4F);
             this.discard();
         }
     }

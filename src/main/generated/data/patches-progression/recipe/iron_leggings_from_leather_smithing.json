@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "patches-progression:iron_bar"
+  },
+  "base": {
+    "item": "minecraft:leather_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_leggings"
+  },
+  "template": {
+    "item": "patches-progression:iron_upgrade_template"
+  }
+}

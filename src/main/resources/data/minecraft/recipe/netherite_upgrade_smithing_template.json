@@ -5,19 +5,19 @@
     "#": {
       "item": "minecraft:netherite_upgrade_smithing_template"
     },
-    "M": {
+    "G": {
       "item": "minecraft:gold_ingot"
     },
-    "C": {
-      "item": "minecraft:netherrack"
+    "M": {
+      "item": "minecraft:netherite_scrap"
     },
     "S": {
-      "item": "minecraft:netherite_scrap"
+      "item": "minecraft:netherrack"
     }
   },
   "pattern": [
     "S#S",
-    "MCM",
+    "MGM",
     "SMS"
   ],
   "result": {

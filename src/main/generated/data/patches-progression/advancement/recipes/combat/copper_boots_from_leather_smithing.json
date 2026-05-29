@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "patches-progression:copper_bar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patches-progression:copper_boots_from_leather_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_copper_bar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patches-progression:copper_boots_from_leather_smithing"
+    ]
+  }
+}

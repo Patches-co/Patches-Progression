@@ -41,6 +41,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_LEGGINGS, RecipeCategory.COMBAT, ModItems.COPPER_LEGGINGS);
         offerCopperUpgradeRecipe(exporter, Items.CHAINMAIL_BOOTS, RecipeCategory.COMBAT, ModItems.COPPER_BOOTS);
 
+        offerLeatherToMetalSmithing(exporter, ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_HELMET, ModItems.COPPER_BAR, ModItems.COPPER_HELMET);
+        offerLeatherToMetalSmithing(exporter, ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_CHESTPLATE, ModItems.COPPER_BAR, ModItems.COPPER_CHESTPLATE);
+        offerLeatherToMetalSmithing(exporter, ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_LEGGINGS, ModItems.COPPER_BAR, ModItems.COPPER_LEGGINGS);
+        offerLeatherToMetalSmithing(exporter, ModItems.COPPER_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_BOOTS, ModItems.COPPER_BAR, ModItems.COPPER_BOOTS);
+
+        offerLeatherToMetalSmithing(exporter, ModItems.IRON_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_HELMET, ModItems.IRON_BAR, Items.IRON_HELMET);
+        offerLeatherToMetalSmithing(exporter, ModItems.IRON_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_CHESTPLATE, ModItems.IRON_BAR, Items.IRON_CHESTPLATE);
+        offerLeatherToMetalSmithing(exporter, ModItems.IRON_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_LEGGINGS, ModItems.IRON_BAR, Items.IRON_LEGGINGS);
+        offerLeatherToMetalSmithing(exporter, ModItems.IRON_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_BOOTS, ModItems.IRON_BAR, Items.IRON_BOOTS);
+
+        offerLeatherToMetalSmithing(exporter, ModItems.GOLD_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_HELMET, ModItems.GOLD_BAR, Items.GOLDEN_HELMET);
+        offerLeatherToMetalSmithing(exporter, ModItems.GOLD_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_CHESTPLATE, ModItems.GOLD_BAR, Items.GOLDEN_CHESTPLATE);
+        offerLeatherToMetalSmithing(exporter, ModItems.GOLD_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_LEGGINGS, ModItems.GOLD_BAR, Items.GOLDEN_LEGGINGS);
+        offerLeatherToMetalSmithing(exporter, ModItems.GOLD_UPGRADE_SMITHING_TEMPLATE, Items.LEATHER_BOOTS, ModItems.GOLD_BAR, Items.GOLDEN_BOOTS);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.KNAPPED_ROCK).input(ModBlocks.ROCK_PEBBLE).input(Items.FLINT)
                 .criterion(hasItem(ModBlocks.ROCK_PEBBLE), conditionsFromItem(ModBlocks.ROCK_PEBBLE))
                 .offerTo(exporter);
@@ -102,5 +117,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 )
                 .criterion("has_copper_bar", conditionsFromItem(ModItems.COPPER_BAR))
                 .offerTo(exporter, getItemPath(result) + "_smithing");
+    }
+
+    private void offerLeatherToMetalSmithing(RecipeExporter exporter, Item template, Item leatherBase, Item addition, Item result) {
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(template),
+                        Ingredient.ofItems(leatherBase),
+                        Ingredient.ofItems(addition),
+                        RecipeCategory.COMBAT,
+                        result
+                )
+                .criterion(hasItem(addition), conditionsFromItem(addition))
+                .offerTo(exporter, Identifier.of("patches-progression", getItemPath(result) + "_from_leather_smithing"));
     }
 }

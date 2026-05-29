@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "patches-progression:gold_bar"
+  },
+  "base": {
+    "item": "minecraft:leather_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:golden_boots"
+  },
+  "template": {
+    "item": "patches-progression:gold_upgrade_template"
+  }
+}

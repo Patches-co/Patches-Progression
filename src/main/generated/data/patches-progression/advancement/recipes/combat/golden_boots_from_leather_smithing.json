@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "patches-progression:gold_bar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patches-progression:golden_boots_from_leather_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gold_bar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patches-progression:golden_boots_from_leather_smithing"
+    ]
+  }
+}
