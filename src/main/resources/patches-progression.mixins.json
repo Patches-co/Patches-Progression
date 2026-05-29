@@ -4,8 +4,9 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ArmorMaterialMixin",
-		"ToolMaterialsMixin",
-		"SmithingTransformRecipeMixin"
+		"PlayerEntityMixin",
+		"SmithingTransformRecipeMixin",
+		"ToolMaterialsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
