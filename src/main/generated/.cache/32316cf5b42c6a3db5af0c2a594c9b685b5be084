@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-29T16:41:20.1832003	Patche's Progression/Model Definitions
+// 1.21.1	2026-06-03T18:59:51.5088302	Patche's Progression/Model Definitions
 8734609180fdfc2e40c838deb92365c68a850816 assets\patches-progression\models\item\copper_boots_netherite_trim.json
 a878a89335945aeca972833c47d8477d58ddf548 assets\patches-progression\models\item\copper_chestplate_netherite_trim.json
 e164cae2ccb7eac99a121c759ab9dbb95e3335ee assets\patches-progression\models\item\copper_chestplate_quartz_trim.json
@@ -9,6 +9,7 @@ fabc7dd9fbb39c3fd999188837ec971dec653dce assets\patches-progression\models\item\
 a51fe31a7dd3d8bd0ba282d4bafb1551033e23d7 assets\patches-progression\models\item\copper_chestplate_iron_trim.json
 0212db1bbfab5f87f0b554794cfa8dea0543d0c5 assets\patches-progression\models\item\copper_chestplate.json
 f344993bc140533ea4e44073476d62b1344a0abd assets\patches-progression\models\item\copper_hoe.json
+d397bad114a183323ce8149f25f586ab52b2fbb6 assets\patches-progression\models\item\flint_knife.json
 6a8a25956852d9cc44efbd040c8920d6a6fe74af assets\patches-progression\models\item\copper_sword.json
 18ae16ef53eba2e0e0d80d317475ea74a2a6590f assets\patches-progression\models\item\copper_helmet_lapis_trim.json
 7f796bcf5c5f2e35ffaf415cc4be610526370a88 assets\patches-progression\models\item\copper_helmet_redstone_trim.json

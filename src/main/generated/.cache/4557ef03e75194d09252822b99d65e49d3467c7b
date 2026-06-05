@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-29T16:41:20.1841993	Patche's Progression/Recipes
+// 1.21.1	2026-06-03T18:59:51.5112922	Patche's Progression/Recipes
 2872d03a157dc8c9ee13717833bc69ebc39ce58a data\patches-progression\recipe\leather_from_smelting_rotten_leather.json
 a5478b53d7928cb65d5183158bb574f70b372292 data\patches-progression\advancement\recipes\combat\copper_helmet_smithing.json
 c68070110416fa1f080625a13c74a988ab15951c data\patches-progression\recipe\copper_leggings_smithing.json
@@ -20,8 +20,10 @@ e67fcc860d2303a076f6902f35a75e73446cc9f5 data\patches-progression\recipe\copper_
 7e036033d4526e9220803c88e1b9dc4726abd455 data\patches-progression\recipe\copper_nugget_from_blasting_copper_chestplate.json
 dd88674fa743bf20071dcb8b41e40abe0b6a5db9 data\patches-progression\advancement\recipes\combat\copper_boots_smithing.json
 65b12bf663dde6bbc0ea13c541683a8da71e167f data\patches-progression\recipe\copper_leggings_from_leather_smithing.json
+acfcbe4cd5b8aaca37cbdee4b48ec56ce56bf918 data\patches-progression\advancement\recipes\combat\flint_knife.json
 d16098f397caea70aec434116dc39af3b6588ae2 data\patches-progression\recipe\copper_chestplate_from_leather_smithing.json
 49eeda5b0fb572791b242bbc30d75513beb5ad93 data\patches-progression\advancement\recipes\misc\copper_nugget_from_smelting_copper_chestplate.json
+bf224806756f857eda1b17a773dc3f502f3e78fd data\patches-progression\recipe\flint_knife.json
 488211e14c1540041bc4bb1a482bf51feac2d272 data\patches-progression\advancement\recipes\combat\copper_chestplate_from_leather_smithing.json
 114cd75f7e3dd4f2b81db39c936c317b53266906 data\patches-progression\advancement\recipes\combat\copper_boots_from_leather_smithing.json
 770a349e2afacf795f2a0e165ef494570352a836 data\patches-progression\advancement\recipes\building_blocks\cobblestone.json

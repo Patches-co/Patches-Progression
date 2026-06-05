@@ -35,5 +35,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.COPPER_HOE);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.FLINT_KNIFE);
     }
 }

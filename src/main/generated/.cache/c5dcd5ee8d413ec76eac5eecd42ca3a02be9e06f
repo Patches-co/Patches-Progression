@@ -1,7 +1,7 @@
-// 1.21.1	2026-05-29T16:41:20.1821672	Patche's Progression/Tags for minecraft:item
+// 1.21.1	2026-06-03T18:59:51.5068297	Patche's Progression/Tags for minecraft:item
 69887bfd02bf5a6617847e16dd002abed023781c data\minecraft\tags\item\hoes.json
 90ceb0217d8f7d50d30ec642d6b3c0498a9adeef data\minecraft\tags\item\pickaxes.json
 b2ccab676a0211082200bc1efa4ee2aef7e23f38 data\minecraft\tags\item\axes.json
-3a91a1a7b8af7ba6a9783d5f1d212aeb9e30c551 data\minecraft\tags\item\swords.json
+b10f73607d7033da385cefa49163da881bb5b45e data\minecraft\tags\item\swords.json
 921bed87aa3512f6d143845f8b1d8ebb5d330094 data\minecraft\tags\item\trimmable_armor.json
 3d8ef8f9030ed019f12102ce461eb7d8c2c8e130 data\minecraft\tags\item\shovels.json

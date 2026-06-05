@@ -1,17 +1,18 @@
 {
-	"required": true,
-	"package": "net.patches.progression.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ArmorMaterialMixin",
-		"PlayerEntityMixin",
-		"SmithingTransformRecipeMixin",
-		"ToolMaterialsMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "net.patches.progression.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArmorMaterialMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "SmithingTransformRecipeMixin",
+    "ToolMaterialsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }

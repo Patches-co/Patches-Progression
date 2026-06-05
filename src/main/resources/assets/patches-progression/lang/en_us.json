@@ -27,6 +27,8 @@
   "item.patches-progression.copper_shovel": "Copper Shovel",
   "item.patches-progression.copper_hoe": "Copper Hoe",
 
+  "item.patches-progression.flint_knife": "Flint Knife",
+
   "itemgroup.patches-progression.patches_progression": "Patches Progression Items",
 
   "tooltip.patches-progression.copper_upgrade.applies_to" : "Chainmail Armor",

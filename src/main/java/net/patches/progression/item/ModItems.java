@@ -2,6 +2,7 @@ package net.patches.progression.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -10,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.patches.progression.PatchesProgression;
 import net.patches.progression.block.ModBlocks;
 import net.patches.progression.item.custom.KnappedRockItem;
+import net.patches.progression.item.custom.KnifeItem;
 import net.patches.progression.item.custom.RockItem;
 
 import java.util.List;
@@ -53,7 +55,14 @@ public class ModItems {
     public static final Item CHAINMAIL_SHEET = registerItem("chainmail_sheet", new Item(new Item.Settings()));
     public static final Item ROTTEN_LEATHER = registerItem("rotten_leather", new Item(new Item.Settings()));
 
-
+    // KNIFE
+    public static final Item FLINT_KNIFE = Registry.register(
+            Registries.ITEM, Identifier.of("patches-progression", "flint_knife"),
+            new KnifeItem(ModToolMaterials.FLINT, new Item.Settings()
+                    .maxDamage(ModToolMaterials.FLINT.getDurability())
+                    .attributeModifiers(KnifeItem.createKnifeModifiers(ModToolMaterials.FLINT, 0.5f, -2.0f))
+            )
+    );
     // BARS
     public static final Item COPPER_BAR = registerItem("copper_bar", new Item(new Item.Settings()));
     public static final Item IRON_BAR = registerItem("iron_bar", new Item(new Item.Settings()));

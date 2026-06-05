@@ -109,6 +109,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLINT_KNIFE, 1)
+                .pattern(" F")
+                .pattern("S ")
+                .input('F', Items.FLINT)
+                .input('S', Items.STICK)
+                .criterion("has_flint", conditionsFromItem(Items.FLINT))
+                .offerTo(exporter, Identifier.of("patches-progression", "flint_knife"));
     }
 
     public static void offerCopperUpgradeRecipe(RecipeExporter exporter, Item input, RecipeCategory category, Item result) {

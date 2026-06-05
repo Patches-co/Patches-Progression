@@ -9,7 +9,14 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-
+    FLINT(
+            BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+            32,
+            1.0F,
+            1.0F,
+            5,
+            () -> Ingredient.ofItems(Items.FLINT)
+    ),
     COPPER(
             BlockTags.INCORRECT_FOR_GOLD_TOOL,
             131,
